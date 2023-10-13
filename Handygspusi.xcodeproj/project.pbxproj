@@ -14,6 +14,7 @@
 		811694CB2AD9A250009CF24D /* HandygspusiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811694CA2AD9A250009CF24D /* HandygspusiTests.swift */; };
 		811694D52AD9A250009CF24D /* HandygspusiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811694D42AD9A250009CF24D /* HandygspusiUITests.swift */; };
 		811694D72AD9A250009CF24D /* HandygspusiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811694D62AD9A250009CF24D /* HandygspusiUITestsLaunchTests.swift */; };
+		811694E62AD9A363009CF24D /* Contract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811694E52AD9A363009CF24D /* Contract.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		811694D02AD9A250009CF24D /* HandygspusiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HandygspusiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		811694D42AD9A250009CF24D /* HandygspusiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandygspusiUITests.swift; sourceTree = "<group>"; };
 		811694D62AD9A250009CF24D /* HandygspusiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandygspusiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		811694E52AD9A363009CF24D /* Contract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contract.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +96,9 @@
 		811694B82AD9A24E009CF24D /* Handygspusi */ = {
 			isa = PBXGroup;
 			children = (
+				811694E42AD9A2F8009CF24D /* Views */,
+				811694E32AD9A2E9009CF24D /* Models */,
 				811694B92AD9A24E009CF24D /* HandygspusiApp.swift */,
-				811694BB2AD9A24E009CF24D /* ContentView.swift */,
 				811694BD2AD9A24F009CF24D /* Assets.xcassets */,
 				811694BF2AD9A250009CF24D /* Preview Content */,
 			);
@@ -125,6 +128,22 @@
 				811694D62AD9A250009CF24D /* HandygspusiUITestsLaunchTests.swift */,
 			);
 			path = HandygspusiUITests;
+			sourceTree = "<group>";
+		};
+		811694E32AD9A2E9009CF24D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				811694E52AD9A363009CF24D /* Contract.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		811694E42AD9A2F8009CF24D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				811694BB2AD9A24E009CF24D /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +278,7 @@
 			files = (
 				811694BC2AD9A24E009CF24D /* ContentView.swift in Sources */,
 				811694BA2AD9A24E009CF24D /* HandygspusiApp.swift in Sources */,
+				811694E62AD9A363009CF24D /* Contract.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
