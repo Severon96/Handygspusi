@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
+    @Query private var contracts: [Contract]
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -21,4 +24,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+        .modelContainer(for: Contract.self, inMemory: true)
 }
