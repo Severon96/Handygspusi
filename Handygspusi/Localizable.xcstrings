@@ -1,8 +1,56 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "Hello, world!" : {
+    "%@ €" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ €"
+          }
+        }
+      }
+    },
+    "Add contract" : {
 
+    },
+    "Connection fee" : {
+
+    },
+    "Monthly fee" : {
+
+    },
+    "Network" : {
+
+    },
+    "No contracts found. 🙇🏼‍♂️\nFeel free to add some! 🤗" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keine Verträge gefunden.🙇🏼‍♂️\nFüg gerne welche hinzu! 🤗"
+          }
+        }
+      }
+    },
+    "Onetime device costs" : {
+
+    },
+    "Provider" : {
+
+    },
+    "Tariff" : {
+
+    },
+    "Your contracts 📑" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deine Verträge 📑"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"
