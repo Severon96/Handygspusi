@@ -9,7 +9,7 @@ import SwiftUI
 struct EditContractView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @Environment(\.modelContext) private var modelContext
-    @Bindable var contract = Contract(id: UUID(), provider: "", network: "", tariff: "", connectionFee: 0.0, monthlyFee: 0.0, oneTimeDeviceCosts: 0.0, cashback: 0.0, freeMonths: 0, url: "")
+    @State var contract = Contract(id: UUID(), provider: "", network: "", tariff: "", connectionFee: 0.0, monthlyFee: 0.0, oneTimeDeviceCosts: 0.0, cashback: 0.0, freeMonths: 0, url: "")
     
     var disableForm: Bool {
         contract.provider.isEmpty || contract.network.isEmpty || contract.tariff.isEmpty || contract.contractRuntimeInMonths == 0 || contract.monthlyFee == 0
@@ -31,8 +31,7 @@ struct EditContractView: View {
                         .foregroundStyle(.gray)
                         .font(.system(size: 15))
                         .frame(width: 150, alignment: .leading)
-                    TextField("Contract runtime in months", value: $contract.contractRuntimeInMonths, format: .number)
-                        .keyboardType(.numberPad)
+                    IntegerTextField(label: "Contract runtime in months", instance: $contract, propertyToSet: \Contract.contractRuntimeInMonths)
                     Text("€")
                         .foregroundStyle(.gray)
                         .font(.system(size: 15))
@@ -42,8 +41,7 @@ struct EditContractView: View {
                         .foregroundStyle(.gray)
                         .font(.system(size: 15))
                         .frame(width: 150, alignment: .leading)
-                    TextField("Connection fee", value: $contract.connectionFee, format: .number)
-                        .keyboardType(.decimalPad)
+                    DoubleTextField(label: "Connection fee", instance: $contract, propertyToSet: \Contract.connectionFee)
                     Text("€")
                         .foregroundStyle(.gray)
                         .font(.system(size: 15))
@@ -53,8 +51,7 @@ struct EditContractView: View {
                         .foregroundStyle(.gray)
                         .font(.system(size: 15))
                         .frame(width: 150, alignment: .leading)
-                    TextField("Onetime device costs", value: $contract.oneTimeDeviceCosts, format: .number)
-                        .keyboardType(.decimalPad)
+                    DoubleTextField(label: "Onetime device costs", instance: $contract, propertyToSet: \Contract.oneTimeDeviceCosts)
                     Text("€")
                         .foregroundStyle(.gray)
                         .font(.system(size: 15))
@@ -64,8 +61,7 @@ struct EditContractView: View {
                         .foregroundStyle(.gray)
                         .font(.system(size: 15))
                         .frame(width: 150, alignment: .leading)
-                    TextField("Monthly fee", value: $contract.monthlyFee, format: .number)
-                        .keyboardType(.decimalPad)
+                    DoubleTextField(label: "Monthly fee", instance: $contract, propertyToSet: \Contract.monthlyFee)
                     Text("€")
                         .foregroundStyle(.gray)
                         .font(.system(size: 15))
@@ -75,8 +71,7 @@ struct EditContractView: View {
                         .foregroundStyle(.gray)
                         .font(.system(size: 15))
                         .frame(width: 150, alignment: .leading)
-                    TextField("Cashback", value: $contract.cashback, format: .number)
-                        .keyboardType(.decimalPad)
+                    DoubleTextField(label: "Cashback", instance: $contract, propertyToSet: \Contract.cashback)
                     Text("€")
                         .foregroundStyle(.gray)
                         .font(.system(size: 15))
@@ -86,8 +81,7 @@ struct EditContractView: View {
                         .foregroundStyle(.gray)
                         .font(.system(size: 15))
                         .frame(width: 150, alignment: .leading)
-                    TextField("Free months", value: $contract.freeMonths, format: .number)
-                        .keyboardType(.numberPad)
+                    IntegerTextField(label: "Free months", instance: $contract, propertyToSet: \Contract.freeMonths)
                     Text("€")
                         .foregroundStyle(.gray)
                         .font(.system(size: 15))

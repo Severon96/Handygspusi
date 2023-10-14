@@ -20,6 +20,8 @@
 		811694ED2AD9BA24009CF24D /* PriceUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811694EC2AD9BA24009CF24D /* PriceUtil.swift */; };
 		811694EF2AD9C1A0009CF24D /* EditContractView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811694EE2AD9C1A0009CF24D /* EditContractView.swift */; };
 		81DF58232ADA9753009AF61C /* ContractView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DF58222ADA9753009AF61C /* ContractView.swift */; };
+		81DF58252ADAB65E009AF61C /* DoubleTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DF58242ADAB65E009AF61C /* DoubleTextField.swift */; };
+		81DF58272ADABE61009AF61C /* IntegerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DF58262ADABE61009AF61C /* IntegerTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		811694EC2AD9BA24009CF24D /* PriceUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceUtil.swift; sourceTree = "<group>"; };
 		811694EE2AD9C1A0009CF24D /* EditContractView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContractView.swift; sourceTree = "<group>"; };
 		81DF58222ADA9753009AF61C /* ContractView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractView.swift; sourceTree = "<group>"; };
+		81DF58242ADAB65E009AF61C /* DoubleTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleTextField.swift; sourceTree = "<group>"; };
+		81DF58262ADABE61009AF61C /* IntegerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegerTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +161,8 @@
 				811694E92AD9B6E7009CF24D /* ContractListEntry.swift */,
 				811694EE2AD9C1A0009CF24D /* EditContractView.swift */,
 				81DF58222ADA9753009AF61C /* ContractView.swift */,
+				81DF58242ADAB65E009AF61C /* DoubleTextField.swift */,
+				81DF58262ADABE61009AF61C /* IntegerTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -302,7 +308,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				811694BC2AD9A24E009CF24D /* ContentView.swift in Sources */,
+				81DF58272ADABE61009AF61C /* IntegerTextField.swift in Sources */,
 				81DF58232ADA9753009AF61C /* ContractView.swift in Sources */,
+				81DF58252ADAB65E009AF61C /* DoubleTextField.swift in Sources */,
 				811694BA2AD9A24E009CF24D /* HandygspusiApp.swift in Sources */,
 				811694EA2AD9B6E7009CF24D /* ContractListEntry.swift in Sources */,
 				811694ED2AD9BA24009CF24D /* PriceUtil.swift in Sources */,
