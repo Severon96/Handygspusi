@@ -10,9 +10,12 @@ struct AddContractView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @Environment(\.modelContext) private var modelContext
     @Bindable var contract = Contract(id: UUID(), provider: "", network: "", tariff: "", connectionFee: 0.0, monthlyFee: 0.0, oneTimeDeviceCosts: 0.0, cashback: 0.0, freeMonths: 0, url: "")
+    
     var disableForm: Bool {
         contract.provider.isEmpty || contract.network.isEmpty || contract.tariff.isEmpty || contract.contractRuntimeInMonths == 0 || contract.monthlyFee == 0
     }
+    
+    var showSaveButton: Bool = true
     
     var body: some View {
         Form {
@@ -29,6 +32,9 @@ struct AddContractView: View {
                         .frame(width: 150, alignment: .leading)
                     TextField("Contract runtime in months", value: $contract.contractRuntimeInMonths, format: .number)
                         .keyboardType(.numberPad)
+                    Text("€")
+                        .foregroundStyle(.gray)
+                        .font(.system(size: 15))
                 }
                 HStack {
                     Text("Connection fee")
@@ -37,6 +43,9 @@ struct AddContractView: View {
                         .frame(width: 150, alignment: .leading)
                     TextField("Connection fee", value: $contract.connectionFee, format: .number)
                         .keyboardType(.decimalPad)
+                    Text("€")
+                        .foregroundStyle(.gray)
+                        .font(.system(size: 15))
                 }
                 HStack {
                     Text("Onetime device costs")
@@ -45,6 +54,9 @@ struct AddContractView: View {
                         .frame(width: 150, alignment: .leading)
                     TextField("Onetime device costs", value: $contract.oneTimeDeviceCosts, format: .number)
                         .keyboardType(.decimalPad)
+                    Text("€")
+                        .foregroundStyle(.gray)
+                        .font(.system(size: 15))
                 }
                 HStack {
                     Text("Monthly fee")
@@ -53,6 +65,9 @@ struct AddContractView: View {
                         .frame(width: 150, alignment: .leading)
                     TextField("Monthly fee", value: $contract.monthlyFee, format: .number)
                         .keyboardType(.decimalPad)
+                    Text("€")
+                        .foregroundStyle(.gray)
+                        .font(.system(size: 15))
                 }
                 HStack {
                     Text("Cashback")
@@ -61,6 +76,9 @@ struct AddContractView: View {
                         .frame(width: 150, alignment: .leading)
                     TextField("Cashback", value: $contract.cashback, format: .number)
                         .keyboardType(.decimalPad)
+                    Text("€")
+                        .foregroundStyle(.gray)
+                        .font(.system(size: 15))
                 }
                 HStack {
                     Text("Free months")
@@ -69,6 +87,9 @@ struct AddContractView: View {
                         .frame(width: 150, alignment: .leading)
                     TextField("Free months", value: $contract.freeMonths, format: .number)
                         .keyboardType(.numberPad)
+                    Text("€")
+                        .foregroundStyle(.gray)
+                        .font(.system(size: 15))
                 }
             }
             Section {
@@ -77,12 +98,15 @@ struct AddContractView: View {
                         .keyboardType(.URL)
                 }
             }
-            Button("Save contract") {
-                withAnimation {
-                    modelContext.insert(contract)
-                    self.presentationMode.wrappedValue.dismiss()
-                }
-            }.disabled(disableForm)
+            
+            if showSaveButton {
+                Button("Save contract") {
+                    withAnimation {
+                        modelContext.insert(contract)
+                        self.presentationMode.wrappedValue.dismiss()
+                    }
+                }.disabled(disableForm)
+            }
         }
         .navigationTitle("Add contract")
     }

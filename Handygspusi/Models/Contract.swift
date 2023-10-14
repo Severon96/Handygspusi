@@ -12,27 +12,27 @@ import SwiftData
 class Contract {
     
     @Attribute(.unique) var id: UUID
-    var contractRuntimeInMonths: Int
+    var contractRuntimeInMonths: Int?
     var provider: String
     var network: String
     var tariff: String
-    var connectionFee: Double
+    var connectionFee: Double?
     var formattedConnectionFee: String {
-        String(format: "%.2f", connectionFee)
+        String(format: "%.2f", connectionFee ?? 0.0)
     }
-    var monthlyFee: Double
+    var monthlyFee: Double?
     var formattedMonthlyFee: String {
-        String(format: "%.2f", monthlyFee)
+        String(format: "%.2f", monthlyFee ?? 0.0)
     }
-    var oneTimeDeviceCosts: Double
+    var oneTimeDeviceCosts: Double?
     var formattedOneTimeDeviceCosts: String {
-        String(format: "%.2f", oneTimeDeviceCosts)
+        String(format: "%.2f", oneTimeDeviceCosts ?? 0.0)
     }
-    var cashback: Double
+    var cashback: Double?
     var formattedCashback: String {
-        String(format: "%.2f", cashback)
+        String(format: "%.2f", cashback ?? 0.0)
     }
-    var freeMonths: Int
+    var freeMonths: Int?
     var url: String
     
     init(id: UUID, contractRuntimeInMonths: Int = 24, provider: String, network: String, tariff: String, connectionFee: Double, monthlyFee: Double, oneTimeDeviceCosts: Double, cashback: Double, freeMonths: Int, url: String = "") {
