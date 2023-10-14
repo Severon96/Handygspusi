@@ -7,6 +7,7 @@
 
 import SwiftUI
 struct AddContractView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @Environment(\.modelContext) private var modelContext
     @Bindable var contract = Contract(id: UUID(), provider: "", network: "", tariff: "", connectionFee: 0.0, monthlyFee: 0.0, oneTimeDeviceCosts: 0.0, cashback: 0.0, freeMonths: 0)
     var disableForm: Bool {
@@ -65,9 +66,9 @@ struct AddContractView: View {
                 }
             }
             Button("Save contract") {
-                print(contract.connectionFee)
                 withAnimation {
                     modelContext.insert(contract)
+                    self.presentationMode.wrappedValue.dismiss()
                 }
             }.disabled(disableForm)
         }

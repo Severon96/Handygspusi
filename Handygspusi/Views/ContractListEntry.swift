@@ -11,7 +11,7 @@ struct ContractListEntry: View {
     let contract: Contract
     
     var body: some View {
-        HStack(spacing: 40){
+        HStack {
             VStack(alignment: .leading) {
                 Text("\(contract.network) \(contract.tariff)")
                     .fixedSize()
@@ -19,8 +19,10 @@ struct ContractListEntry: View {
                     .foregroundColor(.gray)
                     .font(.system(size: 14))
             }
+            Spacer()
             Text("\(PriceUtil.calculateContractPrice(contract: contract)) €")
                 .font(.system(size: 20))
+                .fixedSize()
         }
     }
 }
