@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
+    @Environment(\.modelContext) private var modelContext
     @Query private var contracts: [Contract]
     
     var body: some View {
@@ -22,7 +23,16 @@ struct ContentView: View {
                 } else {
                     List {
                         ForEach(contracts) { contract in
-                            ContractListEntry(contract: contract)
+                            NavigationLink {
+                                ContractView(contract: contract)
+                            } label: {
+                                ContractListEntry(contract: contract)
+                                    .swipeActions {
+                                        Button("Delete", systemImage: "trash", role: .destructive) {
+                                            modelContext.delete(contract)
+                                        }
+                                    }
+                            }
                         }
                     }
                 }
@@ -31,14 +41,13 @@ struct ContentView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink {
-                        AddContractView()
+                        EditContractView()
                     } label: {
                         Image(systemName: "plus")
                     }
                     
                 }
             }
-            .padding()
         }
     }
 }
@@ -48,8 +57,29 @@ struct ContentView: View {
         .modelContainer(for: Contract.self, inMemory: true)
 }
 
+#Preview("English with values") {
+    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+    let container = try! ModelContainer(for: Contract.self, configurations: config)
+    let contract = Contract(id: UUID(), provider: "Telekom", network: "Telekom", tariff: "MagentaMobil M", connectionFee: 30.0, monthlyFee: 20.0, oneTimeDeviceCosts: 0.0, cashback: 0.0, freeMonths: 0)
+    container.mainContext.insert(contract)
+    
+    return ContentView()
+        .modelContainer(container)
+}
+
 #Preview("German") {
     ContentView()
         .modelContainer(for: Contract.self, inMemory: true)
+        .environment(\.locale, Locale(identifier: "DE"))
+}
+
+#Preview("German with values") {
+    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+    let container = try! ModelContainer(for: Contract.self, configurations: config)
+    let contract = Contract(id: UUID(), provider: "Telekom", network: "Telekom", tariff: "MagentaMobil M", connectionFee: 30.0, monthlyFee: 20.0, oneTimeDeviceCosts: 0.0, cashback: 0.0, freeMonths: 0)
+    container.mainContext.insert(contract)
+    
+    return ContentView()
+        .modelContainer(container)
         .environment(\.locale, Locale(identifier: "DE"))
 }

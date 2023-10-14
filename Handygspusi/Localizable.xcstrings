@@ -1,6 +1,22 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "%@ %@" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ %2$@"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ %2$@"
+          }
+        }
+      }
+    },
     "%@ €" : {
       "localizations" : {
         "de" : {
@@ -11,17 +27,105 @@
         }
       }
     },
+    "€" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "€"
+          }
+        }
+      }
+    },
     "Add contract" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vertrag hinzufügen"
+          }
+        }
+      }
+    },
+    "Cashback" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cashback"
+          }
+        }
+      }
     },
     "Connection fee" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anschlussgebühr"
+          }
+        }
+      }
+    },
+    "Contract runtime in months" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vertragslaufzeit in Monaten"
+          }
+        }
+      }
+    },
+    "Delete" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Löschen"
+          }
+        }
+      }
+    },
+    "Edit contract" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vertrag bearbeiten"
+          }
+        }
+      }
+    },
+    "Free months" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kostenlose Monate"
+          }
+        }
+      }
     },
     "Monthly fee" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Monatliche Gebühr"
+          }
+        }
+      }
     },
     "Network" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Netz"
+          }
+        }
+      }
     },
     "No contracts found. 🙇🏼‍♂️\nFeel free to add some! 🤗" : {
       "localizations" : {
@@ -33,14 +137,65 @@
         }
       }
     },
+    "Offer link" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Angebotslink"
+          }
+        }
+      }
+    },
     "Onetime device costs" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einmalige Gerätekosten"
+          }
+        }
+      }
     },
     "Provider" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anbieter"
+          }
+        }
+      }
+    },
+    "Save contract" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vertrag speichern"
+          }
+        }
+      }
+    },
+    "Show offer" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Angebot anzeigen"
+          }
+        }
+      }
     },
     "Tariff" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tarif"
+          }
+        }
+      }
     },
     "Your contracts 📑" : {
       "localizations" : {

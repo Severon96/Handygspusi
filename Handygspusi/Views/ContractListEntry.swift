@@ -11,18 +11,18 @@ struct ContractListEntry: View {
     let contract: Contract
     
     var body: some View {
-        HStack(spacing: 40){
+        HStack {
             VStack(alignment: .leading) {
-                HStack(spacing: 3) {
-                    Text(contract.network)
-                    Text(contract.tariff)
-                }
+                Text("\(contract.network) \(contract.tariff)")
+                    .fixedSize()
                 Text(contract.provider)
                     .foregroundColor(.gray)
                     .font(.system(size: 14))
             }
-            Text("\(String(PriceUtil.calculateContractPrice(contract: contract))) €")
-                .font(.system(size: 25))
+            Spacer()
+            Text("\(PriceUtil.calculateContractPrice(contract: contract)) €")
+                .font(.system(size: 20))
+                .fixedSize()
         }
     }
 }
