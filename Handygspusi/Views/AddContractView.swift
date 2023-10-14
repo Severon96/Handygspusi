@@ -36,7 +36,7 @@ struct AddContractView: View {
                         .font(.system(size: 15))
                         .frame(width: 150, alignment: .leading)
                     TextField("Connection fee", value: $contract.connectionFee, format: .number)
-                        .keyboardType(.numbersAndPunctuation)
+                        .keyboardType(.decimalPad)
                 }
                 HStack {
                     Text("Onetime device costs")
@@ -44,7 +44,7 @@ struct AddContractView: View {
                         .font(.system(size: 15))
                         .frame(width: 150, alignment: .leading)
                     TextField("Onetime device costs", value: $contract.oneTimeDeviceCosts, format: .number)
-                        .keyboardType(.numbersAndPunctuation)
+                        .keyboardType(.decimalPad)
                 }
                 HStack {
                     Text("Monthly fee")
@@ -52,7 +52,7 @@ struct AddContractView: View {
                         .font(.system(size: 15))
                         .frame(width: 150, alignment: .leading)
                     TextField("Monthly fee", value: $contract.monthlyFee, format: .number)
-                        .keyboardType(.numbersAndPunctuation)
+                        .keyboardType(.decimalPad)
                 }
                 HStack {
                     Text("Cashback")
@@ -60,7 +60,7 @@ struct AddContractView: View {
                         .font(.system(size: 15))
                         .frame(width: 150, alignment: .leading)
                     TextField("Cashback", value: $contract.cashback, format: .number)
-                        .keyboardType(.numbersAndPunctuation)
+                        .keyboardType(.decimalPad)
                 }
                 HStack {
                     Text("Free months")
