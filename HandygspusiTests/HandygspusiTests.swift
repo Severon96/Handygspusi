@@ -16,12 +16,24 @@ final class HandygspusiTests: XCTestCase {
         contract = Contract(id: UUID(), provider: "Sparhandy", network: "Telekom", tariff: "MagentaMobil M", connectionFee: 39.99, monthlyFee: 39.95, oneTimeDeviceCosts: 300.00, cashback: 0.00, freeMonths: 0, url: "https://telekom.de")
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func testPriceCalc() {
+        let fullPrice = PriceUtil.calculateContractPrice(contract: contract!)
+
+        XCTAssertTrue(fullPrice == "1298.79")
+    }
+    
+    func testPriceCalcWithCashback() {
+        contract?.cashback = 200
+        let fullPrice = PriceUtil.calculateContractPrice(contract: contract!)
+        
+        XCTAssertTrue(fullPrice == "1098.79")
+    }
+    
+    func testPriceCalcWithoutDevice() {
+        contract?.oneTimeDeviceCosts = 0
+        let fullPrice = PriceUtil.calculateContractPrice(contract: contract!)
+        
+        XCTAssertTrue(fullPrice == "998.79")
     }
 
 }
