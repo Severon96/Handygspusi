@@ -41,7 +41,7 @@ struct ContentView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink {
-                        AddContractView()
+                        EditContractView()
                     } label: {
                         Image(systemName: "plus")
                     }

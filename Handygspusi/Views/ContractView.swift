@@ -78,7 +78,7 @@ struct ContractView: View {
         }.toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink {
-                        AddContractView(contract: contract, showSaveButton: false)
+                        EditContractView(contract: contract, isEdit: true, showSaveButton: false)
                     } label: {
                         Image(systemName: "square.and.pencil")
                     }

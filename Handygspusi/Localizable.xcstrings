@@ -27,6 +27,16 @@
         }
       }
     },
+    "€" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "€"
+          }
+        }
+      }
+    },
     "Add contract" : {
       "localizations" : {
         "de" : {
@@ -73,6 +83,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Löschen"
+          }
+        }
+      }
+    },
+    "Edit contract" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vertrag bearbeiten"
           }
         }
       }

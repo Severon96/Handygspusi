@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-struct AddContractView: View {
+struct EditContractView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @Environment(\.modelContext) private var modelContext
     @Bindable var contract = Contract(id: UUID(), provider: "", network: "", tariff: "", connectionFee: 0.0, monthlyFee: 0.0, oneTimeDeviceCosts: 0.0, cashback: 0.0, freeMonths: 0, url: "")
@@ -15,6 +15,7 @@ struct AddContractView: View {
         contract.provider.isEmpty || contract.network.isEmpty || contract.tariff.isEmpty || contract.contractRuntimeInMonths == 0 || contract.monthlyFee == 0
     }
     
+    var isEdit: Bool = false
     var showSaveButton: Bool = true
     
     var body: some View {
@@ -108,15 +109,15 @@ struct AddContractView: View {
                 }.disabled(disableForm)
             }
         }
-        .navigationTitle("Add contract")
+        .navigationTitle(isEdit ? "Edit contract" : "Add contract")
     }
 }
 
 #Preview("English") {
-    AddContractView()
+    EditContractView()
 }
 
 #Preview("German") {
-    AddContractView()
+    EditContractView()
         .environment(\.locale, Locale(identifier: "DE"))
 }
