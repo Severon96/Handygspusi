@@ -37,7 +37,7 @@ struct ContractView: View {
                     Text("Contract runtime in months")
                         .foregroundStyle(.gray)
                     Spacer()
-                    Text(String(contract.contractRuntimeInMonths ?? 0))
+                    Text(String(contract.contractRuntimeInMonths))
                 }
                 HStack {
                     Text("Connection fee")
@@ -67,7 +67,7 @@ struct ContractView: View {
                     Text("Free months")
                         .foregroundStyle(.gray)
                     Spacer()
-                    Text("\(String(contract.freeMonths ?? 0)) €")
+                    Text("\(String(contract.freeMonths)) €")
                 }
             }
             if !contract.url.isEmpty {
