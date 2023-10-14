@@ -23,12 +23,16 @@ struct ContentView: View {
                 } else {
                     List {
                         ForEach(contracts) { contract in
-                            ContractListEntry(contract: contract)
-                                .swipeActions {
-                                    Button("Delete", systemImage: "trash", role: .destructive) {
-                                                    modelContext.delete(contract)
-                                                }
-                                }
+                            NavigationLink {
+                                ContractView(contract: contract)
+                            } label: {
+                                ContractListEntry(contract: contract)
+                                    .swipeActions {
+                                        Button("Delete", systemImage: "trash", role: .destructive) {
+                                            modelContext.delete(contract)
+                                        }
+                                    }
+                            }
                         }
                     }
                 }

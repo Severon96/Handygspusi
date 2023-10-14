@@ -17,13 +17,25 @@ class Contract {
     var network: String
     var tariff: String
     var connectionFee: Double
+    var formattedConnectionFee: String {
+        String(format: "%.2f", connectionFee)
+    }
     var monthlyFee: Double
+    var formattedMonthlyFee: String {
+        String(format: "%.2f", monthlyFee)
+    }
     var oneTimeDeviceCosts: Double
+    var formattedOneTimeDeviceCosts: String {
+        String(format: "%.2f", oneTimeDeviceCosts)
+    }
     var cashback: Double
+    var formattedCashback: String {
+        String(format: "%.2f", cashback)
+    }
     var freeMonths: Int
-    var url: String?
+    var url: String
     
-    init(id: UUID, contractRuntimeInMonths: Int = 24, provider: String, network: String, tariff: String, connectionFee: Double, monthlyFee: Double, oneTimeDeviceCosts: Double, cashback: Double, freeMonths: Int, url: String? = nil) {
+    init(id: UUID, contractRuntimeInMonths: Int = 24, provider: String, network: String, tariff: String, connectionFee: Double, monthlyFee: Double, oneTimeDeviceCosts: Double, cashback: Double, freeMonths: Int, url: String = "") {
         self.id = id
         self.contractRuntimeInMonths = contractRuntimeInMonths
         self.provider = provider

@@ -117,6 +117,16 @@
         }
       }
     },
+    "Offer link" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Angebotslink"
+          }
+        }
+      }
+    },
     "Onetime device costs" : {
       "localizations" : {
         "de" : {
@@ -143,6 +153,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vertrag speichern"
+          }
+        }
+      }
+    },
+    "Show offer" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Angebot anzeigen"
           }
         }
       }
