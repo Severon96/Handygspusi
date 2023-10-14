@@ -9,7 +9,7 @@ import Foundation
 
 class PriceUtil {
     
-    public static func calculateContractPrice(contract: Contract) -> Double {
+    public static func calculateContractPrice(contract: Contract) -> String {
         var fullContractPrice = 0.0
         
         fullContractPrice += contract.connectionFee
@@ -17,7 +17,7 @@ class PriceUtil {
         fullContractPrice += contract.oneTimeDeviceCosts
         fullContractPrice -= contract.cashback + (Double(contract.freeMonths) * contract.monthlyFee)
         
-        return  fullContractPrice
+        return String(format: "%.2f", fullContractPrice)
     }
     
 }
