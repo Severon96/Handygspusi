@@ -21,6 +21,7 @@
 		81DF58252ADAB65E009AF61C /* DoubleTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DF58242ADAB65E009AF61C /* DoubleTextField.swift */; };
 		81DF58272ADABE61009AF61C /* IntegerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DF58262ADABE61009AF61C /* IntegerTextField.swift */; };
 		81DF58292ADAD246009AF61C /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81DF58282ADAD246009AF61C /* Launch Screen.storyboard */; };
+		BCF942712ADE597300335F00 /* HandygspusiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF9426E2ADE595A00335F00 /* HandygspusiUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		81DF58242ADAB65E009AF61C /* DoubleTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleTextField.swift; sourceTree = "<group>"; };
 		81DF58262ADABE61009AF61C /* IntegerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegerTextField.swift; sourceTree = "<group>"; };
 		81DF58282ADAD246009AF61C /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		BCF9426E2ADE595A00335F00 /* HandygspusiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandygspusiUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 		811694C92AD9A250009CF24D /* HandygspusiTests */ = {
 			isa = PBXGroup;
 			children = (
+				BCF942702ADE595F00335F00 /* UITests */,
 				811694CA2AD9A250009CF24D /* HandygspusiTests.swift */,
 			);
 			path = HandygspusiTests;
@@ -162,6 +165,14 @@
 				811694EC2AD9BA24009CF24D /* PriceUtil.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		BCF942702ADE595F00335F00 /* UITests */ = {
+			isa = PBXGroup;
+			children = (
+				BCF9426E2ADE595A00335F00 /* HandygspusiUITests.swift */,
+			);
+			path = UITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCF942712ADE597300335F00 /* HandygspusiUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

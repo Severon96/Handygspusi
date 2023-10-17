@@ -20,6 +20,7 @@ struct ContentView: View {
                         .multilineTextAlignment(.center)
                         .font(.system(size: 15))
                         .foregroundColor(.gray)
+                        .accessibilityIdentifier("NoContractsFoundLabel")
                 } else {
                     List {
                         ForEach(contracts) { contract in
